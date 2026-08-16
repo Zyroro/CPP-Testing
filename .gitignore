@@ -74,3 +74,6 @@ x64/
 Debug/
 Release/
 *.user
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user

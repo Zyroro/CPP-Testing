@@ -1,4 +1,5 @@
 #include <iostream>
+#include "template.h"
 
 /* Template allows any function to work with different datatypes 
 *  without having to write a separate function for each type 
@@ -27,5 +28,6 @@ int main()
 	print("Hello World!");
 	print(123);
 	printMulti("Hi", 12345);
+	std::cout << max(2, 5); /* From The Header File */
 	return 0;
 }

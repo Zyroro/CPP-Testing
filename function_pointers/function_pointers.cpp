@@ -13,10 +13,9 @@ int substract(int a, int b)
 }
 
 /*
-*	
-*
+*	@brief A function that calculates two integers through a function argument
+*	@param *func Passes the add or subtraction function
 */
-
 
 int calculate(int a, int b, int(*func)(int, int))
 {

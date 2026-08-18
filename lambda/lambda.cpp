@@ -14,6 +14,15 @@ int calculate(int a, int b, int(*func)(int, int))
 
 int main()
 {
+	/* Lambda Expression */
+	auto hello = []()
+		{
+			std::cout << "Hello World" << '\n';
+		};
+
+	hello();
+
+	/* Passing a Lambda Expression As An Argument */
 	std::cout << calculate(2, 1, [](int a, int b)
 		{
 			return a + b;

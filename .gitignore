@@ -385,7 +385,8 @@ FodyWeavers.xsd
 *.sln.iml
 
 # Others
-WIU.vcxproj
-WIU.vcxproj.filters
-WIU.vcxproj.user
+cpp-testing
+cpp-testing.vcxproj.user
+cpp-testing.vcxproj.filters
+*.vcxproj
 

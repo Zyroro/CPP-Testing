@@ -3,6 +3,7 @@
 #include <conio.h>
 
 HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
+bool changeColor = false;
 
 struct Player
 {
@@ -26,11 +27,13 @@ void draw()
 
     for (int row = 0; row < 6; row++)
     {
+        WORD color = changeColor ? (0 | BACKGROUND_RED | BACKGROUND_GREEN | BACKGROUND_INTENSITY) : (14);
+
         for (int col = 0; col < 9; col++)
         {
             if (maze[row][col] == '#')
             {
-                SetConsoleTextAttribute(console, 14);
+                SetConsoleTextAttribute(console, color);
                 std::cout << "墙";
                 SetConsoleTextAttribute(console, 15);
             }
@@ -87,6 +90,9 @@ void getMoveInput()
 
     case 'd':
         movePlayer(0, 1);
+        break;
+    case 'q':
+        changeColor = !changeColor;
         break;
     }
 }

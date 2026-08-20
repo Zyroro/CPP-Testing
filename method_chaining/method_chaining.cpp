@@ -30,6 +30,7 @@ public:
 	Player& setAttack(int attackPts)
 	{
 		m_attackPts = attackPts;
+		return *this;
 	}
 
 	Player& setName(std::string name)
@@ -43,7 +44,8 @@ int main()
 {
 	Player Bob;
 	Bob.setName("Bob")
-		.setHealth(100);
+		.setHealth(100)
+		.setAttack(20);
 
 	Bob.printStats();
 	return 0;

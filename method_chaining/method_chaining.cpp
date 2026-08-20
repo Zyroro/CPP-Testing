@@ -42,6 +42,9 @@ public:
 int main()
 {
 	Player Bob;
+	Bob.setName("Bob")
+		.setHealth(100);
+
 	Bob.printStats();
 	return 0;
 }
